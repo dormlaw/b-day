@@ -1,10 +1,25 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'arab';
+  src: url('fonts/ds-arab.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'itim';
+  src: url('fonts/itimcyrillic.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }
 
 body, html {
   height: 100%;
+  background-color: #FFEAB3;
 }
 
 body.slider__body {
@@ -35,36 +50,85 @@ body.slider__body {
 	height: 100%;
 }
 
-.slider__indicators {
-	position: absolute;
-	left: 18px;
-	top: 50%;
-	z-index: 2;
-	margin: 0;
-	padding: 0;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-.slider__indicator {
-	display: block;
-	width: 10px;
-	height: 10px;
-	margin: 10px 0;
-	border-radius: 100px;
-	background-color: #fff;
-	cursor: default;
-}
-.slider__indicator--active {
-	opacity: 0.3;
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.slide__first {
-  background-color: rgb(179, 228, 65);
+.first {
+  color: white;
+  background: no-repeat top 30px right 0 / 757px 757px url("img/baloons.png");
+  display: flex;
+  flex-direction: column;
+  padding: 303px 0 180px;
+  justify-content: space-between;
+  font-family: itim;
 }
-.slide__second {
-  background-color: rgb(255, 115, 0);
+
+.first_text1, .first_text2 {
+  display:block;
+  padding: 10px 16px;
+  border-radius: 16px;
 }
-.slide__last {
-  background-color: rgb(111, 111, 238);
+
+.first_text1 {
+  font-size: 48px;
+  text-transform: uppercase;
+  transform: matrix(0.98, -0.17, 0.17, 0.98, 0, 0);
+  background: #CCADE5;
+}
+.first_text2 {
+  font-size: 46px;
+  transform: matrix(0.99, 0.15, -0.15, 0.99, 0, 0);
+  background: #6AEDA2;
+}
+.first_emoji {
+  font-size: 100px;
+  transform: matrix(0.99, 0.15, -0.15, 0.99, 0, 0);
+}
+
+.second {
+  position: inherit;
+  background: no-repeat  left -20px top -100px / 377px url("img/dash.png");
+  font-family: arab;
+  font-size: 52px;
+}
+
+.second_text {
+  padding: 10px 70px;
+  position: absolute;
+  line-height: 45px;
+  top: 660px;
+  right: 20px;
+  display: block;
+  background-color: white;
+  border-radius: 48%;
+  border: 2px solid;
+}
+
+.second_text::before, .second_text::after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-color: white;
+  border: 2px solid;
+  border-radius: 50%;
+}
+.second_text::before {
+  top: -40px;
+  left: 170px;
+  width: 25px;
+  height: 25px;
+}
+.second_text::after {
+  top: -65px;
+  left: 160px;
+  width: 12px;
+  height: 12px;
+}
+
+.last {
+  background: no-repeat  center / 60% url("img/kz.png");
+  background-color: #68BCDE;
 }

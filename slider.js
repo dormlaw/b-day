@@ -42,25 +42,14 @@ var slider = function (sliderElement) {
 
 		// set up page and build visual indicators
 		document.querySelector(sliderElement).classList.add('slider__container');
-		var indicatorContainer = document.createElement('div');
-		indicatorContainer.classList.add('slider__indicators');
 
 		var index = 1;
 		[].forEach.call(document.querySelectorAll(sliderElement + ' > *'), function (section) {
-
-			var indicator = document.createElement('a');
-			indicator.classList.add('slider__indicator')
-			indicator.setAttribute('data-slider-target-index', index);
-			indicatorContainer.appendChild(indicator);
 
 			section.classList.add('slider__page');
 			pages.push(section);
 			section.setAttribute('data-slider-index', index++);
 		});
-
-		document.body.appendChild(indicatorContainer);
-		document.querySelector('a[data-slider-target-index = "' + currentSlide +'"]').classList.add('slider__indicator--active');
-
 
 		// stuff for touch devices
 		var touchStartPos = 0;
@@ -132,9 +121,6 @@ var slider = function (sliderElement) {
 			transform: 'translate3d(0, ' + -(currentSlide - 1) * 100 + '%, 0)'
 		});
 
-		// change dots
-		document.querySelector('a.slider__indicator--active').classList.remove('slider__indicator--active');
-		document.querySelector('a[data-slider-target-index="' + currentSlide +'"]').classList.add('slider__indicator--active');
 	};
 
 	// go to spesific slide if it exists
