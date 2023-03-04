@@ -36,7 +36,7 @@ var slider = function (sliderElement) {
 				setTimeout(function() {
 					isChanging = false;
 					window.location.hash = document.querySelector('[data-slider-index="' + currentSlide + '"]').id;
-				}, 400);
+				}, 150);
 			}
 		});
 
@@ -54,7 +54,7 @@ var slider = function (sliderElement) {
 		// stuff for touch devices
 		var touchStartPos = 0;
 		var touchStopPos = 0;
-		var touchMinLength = 90;
+		var touchMinLength = 30;
 		document.addEventListener('touchstart', function (e) {
 			e.preventDefault();
 			if (e.type == 'touchstart' || e.type == 'touchmove' || e.type == 'touchend' || e.type == 'touchcancel') {
