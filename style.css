@@ -37,11 +37,11 @@ body.slider__body {
 	padding: 0;
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
-	-webkit-transition: -webkit-transform 500ms ease-in-out;
-	transition: -webkit-transform 500ms ease-in-out;
-	-o-transition: transform 500ms ease-in-out;
-	transition: transform 500ms ease-in-out;
-	transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+	-webkit-transition: -webkit-transform 200ms ease-in-out;
+	transition: -webkit-transform 200ms ease-in-out;
+	-o-transition: transform 200ms ease-in-out;
+	transition: transform 200ms ease-in-out;
+	transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
 }
 
 .slider__page {
@@ -137,7 +137,7 @@ body.slider__body {
   justify-content: flex-end;
   color: white;
   text-align: center;
-  background: no-repeat  top 40px center / 124px url("img/kz.png"), no-repeat  bottom -200px center / 414px url("img/happybd.png");
+  background: no-repeat  top 40px center / 100px url("img/kz.png"), no-repeat  bottom -200px center / 414px url("img/happybd.png");
   background-color: #68BCDE;
   font-family: itim;
   padding-bottom: 350px;
@@ -151,8 +151,8 @@ body.slider__body {
   text-transform: uppercase;
 }
 .last_text2, .last_text3 {
-  line-height: 50px;
-  font-size: 51px;
+  line-height: 45px;
+  font-size: 46px;
 }
 .last_text3 {
   text-transform: lowercase;
