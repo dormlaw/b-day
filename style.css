@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 @font-face {
@@ -61,7 +62,6 @@ body.slider__body {
   background: no-repeat top 30px right 0 / 757px 757px url("img/baloons.png"), no-repeat  bottom  left / 200px url("img/hat.png");
   display: flex;
   flex-direction: column;
-  /* padding: 303px 0 180px; */
   justify-content: center;
   gap: 45px;
   font-family: itim;
@@ -103,7 +103,7 @@ body.slider__body {
   position: absolute;
   line-height: 45px;
   bottom: 469px;
-  right: 20px;
+  left: 130px;
   display: block;
   background-color: white;
   border-radius: 48%;
